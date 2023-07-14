@@ -5,3 +5,6 @@ streamlit
 xgboost
 streamlit-option-menu
 pandas
+seaborn
+matplotlib
+sklearn
