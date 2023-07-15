@@ -63,7 +63,7 @@ diab_diagnosis =''
 
     # creating button for  prediction
 if st.button('Diabetes Test Result'): #st.button makes a button
-        diab_prediction = dia_model.predict([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
+    diab_prediction = dia_model.predict([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
 
 
     if (diab_prediction[0] == 1):
@@ -126,7 +126,7 @@ heart_diagnosis =''
 
     # creating button for  prediction
 if st.button('Heart Test Result'): #st.button makes a button
-        heart_predicition = heart_model.predict([[Age, Sex, CP, Restbps, Chol, Fbs, Restecg,
+    heart_predicition = heart_model.predict([[Age, Sex, CP, Restbps, Chol, Fbs, Restecg,
                                                Thalach, Exang, Oldpeak, Slope, Ca, Thal]])
 
 
@@ -216,7 +216,7 @@ park_diagnosis =''
 
     # creating button for  prediction
 if st.button('Parkinson Test Result'): #st.button makes a button
-        park_predicition = park_model.predict([[ MDVPFo, MDVPFhi, MDVPFlo, MDVPJitter, 
+    park_predicition = park_model.predict([[ MDVPFo, MDVPFhi, MDVPFlo, MDVPJitter, 
                                                 MDVPJitter, MDVPRAP, MDVPPPQ, JitterDDP,
                                                 MDVPShimmer, MDVPShimmer, ShimmerAPQ3,
                                                 ShimmerAPQ5, MDVPAPQ, ShimmerDDA, 
