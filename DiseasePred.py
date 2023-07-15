@@ -59,19 +59,19 @@ if(selected == 'Diabetes Prediction') :
         Age = st.text_input('Age of the person')
 
     # code for predictions
-diab_diagnosis =''
+    diab_diagnosis =''
 
     # creating button for  prediction
-if st.button('Diabetes Test Result'): #st.button makes a button
-    diab_prediction = dia_model.predict([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
+    if st.button('Diabetes Test Result'): #st.button makes a button
+        diab_prediction = dia_model.predict([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
 
 
-    if (diab_prediction[0] == 1):
-        diab_diagnosis = 'The person is Diabetic'
-    else:
-        diab_diagnosis = 'The person is Not Diabetic'
+        if (diab_prediction[0] == 1):
+            diab_diagnosis = 'The person is Diabetic'
+        else:
+            diab_diagnosis = 'The person is Not Diabetic'
 
-st.success(diab_diagnosis)
+    st.success(diab_diagnosis)
 
 # if heart disease selected
 if(selected == 'Heart Prediction') :
@@ -122,20 +122,20 @@ if(selected == 'Heart Prediction') :
         Thal = st.text_input('THAL:   0 = Normal; 1 = Fixed defect; 2 = Reversable defect')
 
     # code for predictions
-heart_diagnosis =''
+    heart_diagnosis =''
 
     # creating button for  prediction
-if st.button('Heart Test Result'): #st.button makes a button
-    heart_predicition = heart_model.predict([[Age, Sex, CP, Restbps, Chol, Fbs, Restecg,
+    if st.button('Heart Test Result'): #st.button makes a button
+        heart_predicition = heart_model.predict([[Age, Sex, CP, Restbps, Chol, Fbs, Restecg,
                                                Thalach, Exang, Oldpeak, Slope, Ca, Thal]])
 
 
-    if (heart_predicition[0] == 1):
-        heart_diagnosis = 'The person is Heart Disease Affected'
-    else:
-        heart_diagnosis = 'The person is Not Heart Disease Affected'
+        if (heart_predicition[0] == 1):
+            heart_diagnosis = 'The person is Heart Disease Affected'
+        else:
+            heart_diagnosis = 'The person is Not Heart Disease Affected'
 
-st.success(heart_diagnosis)
+    st.success(heart_diagnosis)
 
 # if parkinson selected
 if(selected == 'Parkinsons Prediction') :
@@ -212,11 +212,11 @@ if(selected == 'Parkinsons Prediction') :
     with col1:
         PPE = st.text_input('PPE')
     # code for predictions
-park_diagnosis =''
+    park_diagnosis =''
 
     # creating button for  prediction
-if st.button('Parkinson Test Result'): #st.button makes a button
-    park_predicition = park_model.predict([[ MDVPFo, MDVPFhi, MDVPFlo, MDVPJitter, 
+    if st.button('Parkinson Test Result'): #st.button makes a button
+        park_predicition = park_model.predict([[ MDVPFo, MDVPFhi, MDVPFlo, MDVPJitter, 
                                                 MDVPJitter, MDVPRAP, MDVPPPQ, JitterDDP,
                                                 MDVPShimmer, MDVPShimmer, ShimmerAPQ3,
                                                 ShimmerAPQ5, MDVPAPQ, ShimmerDDA, 
@@ -224,9 +224,9 @@ if st.button('Parkinson Test Result'): #st.button makes a button
                                                 D2, PPE]])
 
 
-    if (park_predicition[0] == 1):
-        park_diagnosis = 'The person is Parkinson Disease Affected'
-    else:
-        park_diagnosis = 'The person is Not Parkinson Disease Affected'
+        if (park_predicition[0] == 1):
+            park_diagnosis = 'The person is Parkinson Disease Affected'
+        else:
+            park_diagnosis = 'The person is Not Parkinson Disease Affected'
 
-st.success(park_diagnosis)
+    st.success(park_diagnosis)
